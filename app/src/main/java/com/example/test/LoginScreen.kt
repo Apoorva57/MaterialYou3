@@ -39,7 +39,7 @@ fun LoginScreen(
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(MaterialTheme.colorScheme.primary),
+            .background(MaterialTheme.colorScheme.onPrimaryContainer),
         contentAlignment = Alignment.Center
     ){
         Column(
@@ -66,8 +66,8 @@ fun LoginScreen(
                 label = { Text("Email")
                 },
                 colors = TextFieldDefaults.outlinedTextFieldColors(
-                    focusedBorderColor = MaterialTheme.colorScheme.onPrimaryContainer,
-                    unfocusedBorderColor = MaterialTheme.colorScheme.onSecondaryContainer),
+                    focusedBorderColor = MaterialTheme.colorScheme.onPrimary,
+                    unfocusedBorderColor = MaterialTheme.colorScheme.onSecondary),
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email),
                 value = emailValue.value,
                 singleLine = true,
@@ -80,8 +80,8 @@ fun LoginScreen(
             OutlinedTextField(
                 label = { Text("Password")},
                 colors = TextFieldDefaults.outlinedTextFieldColors(
-                    focusedBorderColor = MaterialTheme.colorScheme.onPrimaryContainer,
-                    unfocusedBorderColor = MaterialTheme.colorScheme.onSecondaryContainer),
+                    focusedBorderColor = MaterialTheme.colorScheme.onPrimary,
+                    unfocusedBorderColor = MaterialTheme.colorScheme.onSecondary),
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
                 visualTransformation = PasswordVisualTransformation(),
                 value = passwordValue.value,
@@ -96,7 +96,7 @@ fun LoginScreen(
                 .fillMaxWidth(0.9f)
                 .fillMaxHeight(0.4f),
                 colors = ButtonDefaults.buttonColors(
-                    MaterialTheme.colorScheme.secondary,
+                    MaterialTheme.colorScheme.primary,
                     contentColor = Color.White),
                 onClick = {
                     auth.createUserWithEmailAndPassword(
@@ -125,7 +125,7 @@ fun LoginScreen(
                     navController.navigate(route = Screen.SignUp.route)
                 },
                 text = "Don't have an account? Sign Up",
-                color = MaterialTheme.colorScheme.onPrimary,
+                color = MaterialTheme.colorScheme.onSecondary,
                 fontSize = MaterialTheme.typography.bodyLarge.fontSize,
                 fontWeight = FontWeight.Bold
             )

@@ -37,7 +37,7 @@ fun SignUpScreen(
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(MaterialTheme.colorScheme.tertiary),
+            .background(MaterialTheme.colorScheme.onPrimaryContainer),
         contentAlignment = Alignment.Center
     ){
         Column(
@@ -64,8 +64,8 @@ fun SignUpScreen(
             Spacer(modifier = Modifier.padding(4.dp))
             OutlinedTextField(label = {Text("Name")},
                 colors = TextFieldDefaults.outlinedTextFieldColors(
-                    focusedBorderColor = MaterialTheme.colorScheme.onTertiaryContainer,
-                    unfocusedBorderColor = MaterialTheme.colorScheme.tertiaryContainer),
+                    focusedBorderColor = MaterialTheme.colorScheme.onPrimary,
+                    unfocusedBorderColor = MaterialTheme.colorScheme.onSecondary),
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text),
                 value = nameValue.value,
                 singleLine = true,
@@ -77,8 +77,8 @@ fun SignUpScreen(
             Spacer(modifier = Modifier.padding(4.dp))
             OutlinedTextField(label = {Text("Mobile number")},
                 colors = TextFieldDefaults.outlinedTextFieldColors(
-                    focusedBorderColor = MaterialTheme.colorScheme.onTertiaryContainer,
-                    unfocusedBorderColor = MaterialTheme.colorScheme.tertiaryContainer),
+                    focusedBorderColor = MaterialTheme.colorScheme.onPrimary,
+                    unfocusedBorderColor = MaterialTheme.colorScheme.onSecondary),
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
                 value = numberValue.value,
                 singleLine = true,
@@ -91,8 +91,8 @@ fun SignUpScreen(
             OutlinedTextField(
                 label = { Text("Email")},
                 colors = TextFieldDefaults.outlinedTextFieldColors(
-                    focusedBorderColor = MaterialTheme.colorScheme.onTertiaryContainer,
-                    unfocusedBorderColor = MaterialTheme.colorScheme.tertiaryContainer),
+                    focusedBorderColor = MaterialTheme.colorScheme.onPrimary,
+                    unfocusedBorderColor = MaterialTheme.colorScheme.onSecondary),
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email),
                 value = emailValue.value,
                 singleLine = true,
@@ -105,8 +105,8 @@ fun SignUpScreen(
             OutlinedTextField(
                 label = { Text("Password")},
                 colors = TextFieldDefaults.outlinedTextFieldColors(
-                    focusedBorderColor = MaterialTheme.colorScheme.onTertiaryContainer,
-                    unfocusedBorderColor = MaterialTheme.colorScheme.tertiaryContainer),
+                    focusedBorderColor = MaterialTheme.colorScheme.onPrimary,
+                    unfocusedBorderColor = MaterialTheme.colorScheme.onSecondary),
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
                 visualTransformation = PasswordVisualTransformation(),
                 value = passwordValue.value,
@@ -141,7 +141,7 @@ fun SignUpScreen(
                 Text( modifier = Modifier.clickable{
                     navController.navigate(route = Screen.Login.route)
                 }, text = "Register",
-                    color = MaterialTheme.colorScheme.inverseSurface,
+                    color = MaterialTheme.colorScheme.onPrimary,
                     fontSize = MaterialTheme.typography.bodyLarge.fontSize,
                     fontWeight = FontWeight.Bold
                 )
@@ -151,7 +151,7 @@ fun SignUpScreen(
             modifier = Modifier.clickable{
                 navController.navigate(route = Screen.Login.route)},
             text = "Already have an account? Login",
-            color = MaterialTheme.colorScheme.onTertiary,
+            color = MaterialTheme.colorScheme.onSecondary,
             fontSize = MaterialTheme.typography.bodyLarge.fontSize,
             fontWeight = FontWeight.Bold
         )
